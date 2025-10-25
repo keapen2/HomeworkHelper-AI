@@ -1,0 +1,35 @@
+{
+  "name": "homework-helper-ai",
+  "version": "1.0.0",
+  "description": "AI-powered homework helper with personalized study paths",
+  "private": true,
+  "workspaces": [
+    "client-mobile",
+    "client-admin", 
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:admin\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:admin": "cd client-admin && npm run dev",
+    "dev:mobile": "cd client-mobile && npm start",
+    "build": "npm run build:server && npm run build:admin",
+    "build:server": "cd server && npm run build",
+    "build:admin": "cd client-admin && npm run build",
+    "test": "npm run test:server && npm run test:admin",
+    "test:server": "cd server && npm test",
+    "test:admin": "cd client-admin && npm test",
+    "install:all": "npm install && npm run install:server && npm run install:admin && npm run install:mobile",
+    "install:server": "cd server && npm install",
+    "install:admin": "cd client-admin && npm install", 
+    "install:mobile": "cd client-mobile && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

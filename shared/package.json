@@ -1,0 +1,15 @@
+{
+  "name": "@homework-helper/shared",
+  "version": "1.0.0",
+  "description": "Shared types, constants, and utilities for Homework Helper AI",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
+}
